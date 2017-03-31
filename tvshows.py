@@ -2,13 +2,12 @@ from flask import Flask, render_template
 from emmys_data import EMMYS
 app = Flask(__name__)
 
-def get_ids_and_shows(source):
-    ids_and_shows = []
+def get_shows(source):
+    shows = []
     for row in source:
-        id = row["ID"]
         show = row["Show"]
-        ids_and_shows.append([id, show])
-    return ids_and_shows
+        shows.append([show])
+    return shows
 
 def get_showdata(source, show):
     for row in source:
@@ -22,8 +21,7 @@ def get_showdata(source, show):
 @app.route('/')
 @app.route('/index/')
 def index():
-    shows = get_ids_and_shows(EMMYS)
-    # pass the sorted list of titles to the template
+    shows = get_shows(EMMYS)
     return render_template('index.html', id=id)
 
 @app.route('/index/<show>')
