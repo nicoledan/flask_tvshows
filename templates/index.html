@@ -13,8 +13,8 @@
   <h1>Emmy Award Winning TV Shows</h1>
   <p> This is a list of TV shows that have won Emmy Awards in the past few years.</p>
   <ul>
-    {% for show in shows %}
-    <li> <a href="{{ url_for('detail', show=show|replace(" ", "_")) }}"> {{ show }} </a> </li>
+    {% for pair in pairs %}
+    <li> <a href="{{ url_for('detail', id=pair[0] ) }}"> {{ pair[1] }} </a> </li>
     {% endfor %}
   </ul>
 
