@@ -5,13 +5,17 @@
 }
 
 body {
-    background: #fff;
+    background: #BD98FF;
     color: #000;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 #container {
   margin: auto;
+  background: #fff;
+  padding: 20px;
+  padding-top: 10px;
+  width: 600px;
 }
 
 ul {

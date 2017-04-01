@@ -32,8 +32,8 @@ def index():
 @app.route('/detail/<id>')
 
 def detail(id):
-    id, show, network, cateogry = get_showdata(EMMYS,id)
-    return render_template('detail.html', show=show, network=network) # category=category )
+    id, show, network, category = get_showdata(EMMYS,id)
+    return render_template('detail.html', show=show, network=network, category=category )
 
 if __name__ == '__main__':
     app.run(debug=True)
