@@ -10,10 +10,13 @@
 
 <div id="container">
 
-<h1> {{ show }} </h1>
+<h1> Show: {{ show }} </h1>
+<p> Network: {{ network }} </p>
+<p> Emmy Category: {{ category }} </p>
 
-<p> {{ network }} </p>
-<p> {{ category }} </p>
+<p><a href="{{ url_for('index') }}">Return to list</a></p>
+
+
 </div>
 
 </body>

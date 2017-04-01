@@ -15,7 +15,7 @@ def get_ids_and_shows(source):
 def get_showdata(source, id):
     for row in source:
         if id == str( row["ID"] ):
-            show == row["Show"]
+            show = row["Show"]
             network = row["Network"]
             category = row["Category"]
             id = str(id)
@@ -33,7 +33,7 @@ def index():
 
 def detail(id):
     id, show, network, cateogry = get_showdata(EMMYS,id)
-    return render_template('detail.html', show=show, network=network, category=category )
+    return render_template('detail.html', show=show, network=network) # category=category )
 
 if __name__ == '__main__':
     app.run(debug=True)
